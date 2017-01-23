@@ -1,1 +1,1 @@
-web: $(npm bin)/hubot --adapter chatwork
+web: $(npm bin)/hubot --adapter slack
