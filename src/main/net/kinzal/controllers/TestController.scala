@@ -2,15 +2,13 @@ package net.kinzal.controllers
 
 trait TestController extends Controller {
 
-  hear("test1") { msg =>
-    msg.send("aaa")
-  }
+  respond("teach curl") { msg =>
+    val conversation = new Conversation(){}
+    val dialog = conversation.startDialog(msg, 60000)
+    msg.send("URLを教えてください。")
+    dialog.addChoice("(.+)", msg =>{
+      res.send("next question start.")
+    })
 
-  hear("test2") { msg =>
-    msg.send("bbb")
-  }
-
-  respond("test3") { msg =>
-    msg.send("ccc")
   }
 }
