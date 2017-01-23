@@ -8,8 +8,8 @@ trait TestController extends Controller {
     val conversation = new Conversation(){}
     val dialog = conversation.startDialog(msg, 60000)
     msg.send("URLを教えてください。")
-    dialog.addChoice("(.+)", msg =>{
-      res.send("next question start.")
+    dialog.addChoice("(.+)", msg2 =>{
+      msg2.send("next question start.")
     })
 
   }
