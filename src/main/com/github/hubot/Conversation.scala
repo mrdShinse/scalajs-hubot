@@ -5,5 +5,5 @@ import js.annotation._
 
 @ScalaJSDefined
 trait Conversation extends js.Object {
-  def startDialog(msg: Message, timeout: js.Integer): Dialog;
+  def startDialog(msg: Message, timeout: Integer): Dialog;
 }

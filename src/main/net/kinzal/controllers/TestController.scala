@@ -1,5 +1,7 @@
 package net.kinzal.controllers
 
+import com.github.hubot.{Dialog, Conversation}
+
 trait TestController extends Controller {
 
   respond("teach curl") { msg =>
