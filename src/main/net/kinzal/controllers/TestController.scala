@@ -1,6 +1,6 @@
 package net.kinzal.controllers
 
-import com.github.hubot.{Dialog, Conversation}
+import com.github.hubot.{Dialog, Conversation, Message}
 
 trait TestController extends Controller {
 
@@ -8,7 +8,7 @@ trait TestController extends Controller {
     val conversation = new Conversation(){}
     val dialog = conversation.startDialog(msg, 60000)
     msg.send("URLを教えてください。")
-    dialog.addChoice("(.+)", msg2 =>{
+    dialog.addChoice("(.+)", Message msg2 =>{
       msg2.send("next question start.")
     })
 
